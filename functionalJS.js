@@ -18,6 +18,17 @@ function activate() {
     console.log('adding 3 to 2 = ', add3ToInput(2));
     console.log('adding 3 to 5 = ', add3ToInput(5));
 
+    //currying with multiple functions
+    let car = make =>
+        model =>
+            year =>
+            'Make is ' + make + ', ' +
+            'Model is ' + model + ', ' +
+            'Year is ' + year;
+    let accordCar = car('Honda')('Accord')('2017');
+
+    console.log(accordCar);
+
 }
 
 function imperativeDoubleNumbers(numbers) {
@@ -43,6 +54,7 @@ function declarativeDoubleNumbers(numbers) {
 function createAdder(x) {
     return (y) => x + y;
 };
+
 
 
 

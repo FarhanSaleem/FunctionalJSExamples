@@ -37,3 +37,16 @@ var orders = [
 // Add all orders up using array reduce function
 var totalAmount = orders.reduce((sum, order) => sum + order.amount, 0);
 console.log('The total is', totalAmount);
+
+// Use reduce to find average of all amounts
+var avg = orders.reduce((sum, order, index) => {
+    debugger;
+    sum.amount += order.amount;
+    if ( index === orders.length - 1) {
+        return sum.amount/orders.length;
+    } else {
+        return sum;
+    }
+});
+
+console.log('The average is ', avg);
