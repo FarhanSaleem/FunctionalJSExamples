@@ -26,7 +26,6 @@ var animalNames = animals.map(animal => animal.name);
 console.log('Animal Names ', animalNames);
 
 
-
 var orders = [
     { amount: 250 },
     { amount: 50 },

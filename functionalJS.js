@@ -3,6 +3,8 @@
  */
 
 // Example of Imperative coding in JS
+// Comparing imperative to declarative JS functions
+// currying example
 
 activate();
 
@@ -11,7 +13,7 @@ function activate() {
     console.log(imperativeDoubleNumbers(numbers));
     console.log(declarativeDoubleNumbers(numbers));
 
-    //higher order function example and closure
+    //currying function example and closure
     const add3ToInput = createAdder(3);
     console.log('adding 3 to 2 = ', add3ToInput(2));
     console.log('adding 3 to 5 = ', add3ToInput(5));
@@ -36,7 +38,7 @@ function declarativeDoubleNumbers(numbers) {
 }
 
 
-// Simple Example of higher order function and closure
+// Simple Example of currying higher order function and closure
 
 function createAdder(x) {
     return (y) => x + y;
